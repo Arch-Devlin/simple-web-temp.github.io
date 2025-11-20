@@ -120,7 +120,7 @@ body.dark-mode {
 
     .nav-links a {
         padding: 2px 4px; /* shrink link padding */
-        font-size: 1.5em;
+        font-size: 1em;
     }
 }
 
