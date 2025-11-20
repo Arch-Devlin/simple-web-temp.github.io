@@ -50,8 +50,8 @@
 .nav-links {
     display: flex;
     justify-content: center; /* center links horizontally */
-    gap: 20px;
-    padding: 10px 0;
+    gap: 10%;
+    padding: 5px 1px;
     background-color: #e0e0e0; /* nav bar background */
     border-top: 2px solid #ccc; /* top border */
     border-bottom: 2px solid #ccc; /* bottom border */
@@ -71,6 +71,17 @@
     color: white;
 }
 
+@media (max-width: 420px) {
+    .nav-links {
+        gap: 5%;       /* smaller relative spacing */
+        padding: 2px 0; /* reduce vertical padding */
+    }
+
+    .nav-links a {
+        padding: 2px 4px; /* shrink link padding */
+        /* font-size: 0.85em; */
+    }
+}
 
 /* Remove extra margins */
 .logo-link, .cta-btn {
