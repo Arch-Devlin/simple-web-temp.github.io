@@ -89,12 +89,12 @@ body.dark-mode {
 /* Navigation bar */
 .nav-links {
     display: flex;
-    justify-content: center; /* center links horizontally */
+    justify-content: center;
     gap: 10%;
     padding: 5px 1px;
-    background-color: #e0e0e0; /* nav bar background */
-    border-top: 2px solid #ccc; /* top border */
-    border-bottom: 2px solid #ccc; /* bottom border */
+    background-color: #e0e0e0;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
 }
 
 .nav-links a {
@@ -114,12 +114,12 @@ body.dark-mode {
 
 @media (max-width: 570px) {
     .nav-links {
-        gap: 1%;       /* smaller relative spacing */
-        padding: 2px 0; /* reduce vertical padding */
+        gap: 1%;
+        padding: 2px 0;
     }
 
     .nav-links a {
-        padding: 2px 4px; /* shrink link padding */
+        padding: 2px 4px;
         font-size: 1em;
     }
 }
@@ -170,9 +170,9 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    background-color: var(--footer-bg);   /* dark background */
+    background-color: var(--footer-bg);
     color: var(--footer-text);
-    flex-wrap: wrap;          /* stack on very small screens */
+    flex-wrap: wrap; 
     gap: 20px;
 }
 
@@ -212,4 +212,13 @@ main {
     .footer-right {
         margin-top: 10px;
     }
+}
+
+/* Home Page */
+/* Banner */
+.home-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    justify-content: center;
 }
