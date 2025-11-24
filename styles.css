@@ -145,6 +145,8 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    /*justify-content: center;*/
 }
 
 main {
@@ -212,6 +214,11 @@ main {
     .footer-right {
         margin-top: 10px;
     }
+}
+
+.centre-text {
+    text-align: center;
+    font-size: 2rem; 
 }
 
 /* Home Page */
