@@ -224,7 +224,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
+    gap: 0.3rem;
 
     /* Controls width */
     width: 100%;
@@ -249,6 +249,16 @@ main {
     max-width: 450px;
     border-radius: 10px;
     object-fit: cover;
+}
+
+@media (max-width: 250) {
+    .topbar {
+        font-size: 1.2rem;
+    }
+
+    .split-image img {
+        max-width: 70%;
+    }
 }
 /* Home Page */
 /* Banner */
