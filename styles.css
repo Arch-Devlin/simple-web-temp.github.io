@@ -255,14 +255,12 @@ main {
     .split-text {
         max-width: 40%;
         font-size: 1rem;
-        color: blue;
         line-height: 1
     }
 
     .split-image img {
         max-width: 60%;
         border-radius: 5px;
-        max-width: 1000px;
     }
 }
 /* Home Page */
