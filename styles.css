@@ -9,6 +9,8 @@
     --footer-text: #ffffff;
     --cta-bg: #007BFF;
     --cta-hover: #0056b3;
+    --outline-size: 0.15rem;
+    --outline-blur: 0.1rem;
 }
 
 /* Dark mode colors */
@@ -266,6 +268,39 @@ main {
         border-radius: 5px;
     }
 }
+
+.banner {
+    width: 100%;
+    height: auto;              /* adjust height as needed */
+    background-image: url("images/window cleaning.png");
+    background-size: cover;     /* fills the banner, crops edges gracefully */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;              /* optional: centre text inside */
+    align-items: center;
+    justify-content: center;
+
+    color: white;               /* visible on most photos */
+    text-align: center;
+    padding: 1rem;
+}
+
+.text-outline {
+    /*text-shadow:
+        calc(var(--outline-size) * -1) calc(var(--outline-size) * -1) 0 black,
+        var(--outline-size)          calc(var(--outline-size) * -1) 0 black,
+        calc(var(--outline-size) * -1) var(--outline-size)          0 black,
+        var(--outline-size)           var(--outline-size)          0 black;*/
+
+    color: white;
+    filter:
+        drop-shadow(var(--outline-size) var(--outline-size) var(--outline-blur) black)
+        drop-shadow(calc(var(--outline-size) * -1) var(--outline-size) var(--outline-blur) black)
+        drop-shadow(var(--outline-size) calc(var(--outline-size) * -1) var(--outline-blur) black)
+        drop-shadow(calc(var(--outline-size) * -1) calc(var(--outline-size) * -1) var(--outline-blur) black);
+}
+
 /* Home Page */
 /* Banner */
 .home-banner img {
