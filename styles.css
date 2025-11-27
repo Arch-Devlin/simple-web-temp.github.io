@@ -270,7 +270,7 @@ main {
 }
 
 .banner {
-    width: 100%;
+    max-width: 100%;
     height: auto;              /* adjust height as needed */
     background-image: url("images/window cleaning.png");
     background-size: cover;     /* fills the banner, crops edges gracefully */
