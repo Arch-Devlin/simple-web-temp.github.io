@@ -258,8 +258,11 @@ main {
         line-height: 1
     }
 
-    .split-image img {
+    .split-image {
         max-width: 60%;
+    }
+
+    .split-image img {
         border-radius: 5px;
     }
 }
