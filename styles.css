@@ -255,7 +255,8 @@ main {
     .split-text {
         max-width: 40%;
         font-size: 1rem;
-        line-height: 1
+        line-height: 1;
+        color: green;
     }
 
     .split-image {
