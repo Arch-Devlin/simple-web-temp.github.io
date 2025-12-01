@@ -250,18 +250,21 @@ main {
 .split-text {
     flex: 1 1 50%;
     font-size: 1.5rem;
+    justify-content: center;
     text-align: center;
+    padding: 2rem
 }
 .split-image {
     flex: 1 1 50%;
     display: flex;
+    justify-content: center;
 }
 
 .split-image img {
     width: 100%;
     height: auto;
     max-width: 450px;
-    border-radius: 10px;
+    border-radius: 100px;
     object-fit: cover;
 }
 
@@ -330,4 +333,23 @@ main {
 
 .service-map iframe {
     border-radius: 10px; 
+}
+
+/* Contacts */
+.contact-section {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-section a {
+    color: var(--accent-colour);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
 }
