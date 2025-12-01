@@ -324,6 +324,88 @@ main {
     display: block;
 }
 
+/* testimonials */
+/* Wrapper holding arrows + card */
+.testimonial-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 700px;
+    padding: 0 1rem;
+}
+
+/* Card styling */
+.testimonial-card {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Arrows */
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 0 10px;
+    transition: 0.2s;
+}
+
+.arrow:hover {
+    color: var(--cta-bg);
+}
+
+/* Testimonials inside card */
+.testimonial {
+    display: none;
+    text-align: center;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+.testimonial strong {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Shown testimonial */
+.testimonial.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    .arrow {
+        font-size: 2rem;
+    }
+
+    .testimonial-card {
+        padding: 1rem;
+    }
+
+    .testimonial p {
+        font-size: 1rem;
+    }
+}
+
+
 /* Locations */
 .service-map {
     display: flex;  
