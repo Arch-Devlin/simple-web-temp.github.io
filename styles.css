@@ -338,18 +338,19 @@ main {
 /* Contacts */
 .contact-section {
     text-align: center;
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 2rem;
+    line-height: 1.5;
 }
 
 .contact-section a {
-    color: var(--accent-colour);
+    color: var(--cta-bg);
     text-decoration: none;
     font-weight: 600;
 }
 
 .contact-section a:hover {
     text-decoration: underline;
+    color: var(--cta-hover);
 }
