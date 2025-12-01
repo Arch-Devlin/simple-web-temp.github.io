@@ -222,6 +222,18 @@ main {
     text-align: center;
     font-size: 2rem; 
 }
+
+.centre-text a:hover {
+    color: var(--cta-hover);
+}
+
+.centre-text a {
+    color: var(--cta-bg);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
 .split-text-image {
     display: flex;
     align-items: center;
@@ -307,4 +319,15 @@ main {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Locations */
+.service-map {
+    display: flex;  
+    justify-content: center;
+    margin: 1rem;
+}
+
+.service-map iframe {
+    border-radius: 10px; 
 }
