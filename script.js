@@ -9,37 +9,39 @@ document.addEventListener("DOMContentLoaded", () => {
     let slideTimeout;
 
     function show(newIndex, direction) {
-        if (direction === 0) {return} 
+        if (direction === 0) {
+            return;
+        };
+
         const oldIndex = index;
         index = (newIndex + testimonials.length) % testimonials.length;
 
-        const oldTestemonial = testimonials[oldIndex];
-        const newTestemonial = testimonials[index];
+        const oldSlide = testimonials[oldIndex];
+        const newSlide = testimonials[index];
 
-        // remove ALL animation classes
+        // Reset animation classes
         testimonials.forEach(t => {
-            t.classList.remove("slide-out-left", "slide-out-right",
-                            "slide-in-left", "slide-in-right");
+            t.classList.remove("slide-in-left","slide-in-right",
+                               "slide-out-left","slide-out-right");
         });
 
-        // direction = 1 → moving forward
-        if (direction === 1){
-            oldTestemonial.classList.add("slide-out-left");
-            newTestemonial.classList.add("slide-in-right");
-        } 
-        // direction = -1 → moving backward
-        else{
-            oldTestemonial.classList.add("slide-out-right");
-            newTestemonial.classList.add("slide-in-left");
+        // Animate old out, new in
+        if (direction === 1) {
+            oldSlide.classList.add("slide-out-left");
+            newSlide.classList.add("slide-in-right");
+        } else {
+            oldSlide.classList.add("slide-out-right");
+            newSlide.classList.add("slide-in-left");
         }
-        newTestemonial.offsetWidth;
-        
-        newTestemonial.classList.add("active");
-        oldTestemonial.classList.remove("active");
 
+        newSlide.classList.add("active");
+        oldSlide.classList.remove("active");
+
+        // Schedule next slide
         clearTimeout(slideTimeout);
-        slideTimeout = setTimeout(() => show(index + 1, 1), 10000);
+        slideTimeout = setTimeout(() => show(index + 1, 1), 5000);
     }
+
 
     function resetTimer() {
         clearTimeout(slideTimeout);
@@ -68,5 +70,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Start
-    show(0, 0);
+    show(1, 1);
 });

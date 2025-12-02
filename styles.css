@@ -372,20 +372,16 @@ main {
 
 /* Testimonials inside card */
 .testimonial {
-    display: none;
-    text-align: center;
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;       /* make it fill the card */
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-
-    /* vertical + horizontal centring */
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .testimonial p {
@@ -401,8 +397,6 @@ main {
 /* Shown testimonial */
 .testimonial.active {
     display: flex;
-    animation: fadeIn 0.4s ease-in-out;
-    transform: translateX(0);
     opacity: 1;
 }
 
@@ -437,7 +431,7 @@ main {
 }
 
 /* Slide-out left */
-.slide-out-left {
+.testimonial.slide-out-left {
     animation: slideOutLeft 0.5s ease forwards;
 }
 
@@ -453,7 +447,7 @@ main {
 }
 
 /* Slide-out right */
-.slide-out-right {
+.testimonial.slide-out-right {
     animation: slideOutRight 0.5s ease forwards;
 }
 
