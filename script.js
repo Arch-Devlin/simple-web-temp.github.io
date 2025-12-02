@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // ahghhhhhhh
         // bug where when changing movment directions have to click twice 
         // otherwise workes fine
+        //oh and shows nothing on start
         const oldIndex = index;
         index = (newIndex + testimonials.length) % testimonials.length;
 
