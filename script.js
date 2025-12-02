@@ -9,31 +9,34 @@ document.addEventListener("DOMContentLoaded", () => {
     let slideTimeout;
 
     function show(newIndex, direction) {
-        // ahghhhhhhh
-        // bug where when changing movment directions have to click twice 
-        // otherwise workes fine
-        //oh and shows nothing on start
+        if (direction === 0) {return} 
         const oldIndex = index;
         index = (newIndex + testimonials.length) % testimonials.length;
 
-        const oldTestemonial = testimonials[oldIndex]
-        const newTestemonial = testimonials[index]
+        const oldTestemonial = testimonials[oldIndex];
+        const newTestemonial = testimonials[index];
 
+        // remove ALL animation classes
         testimonials.forEach(t => {
-            t.classList.remove("slide-out-left", "slide-out-right");
+            t.classList.remove("slide-out-left", "slide-out-right",
+                            "slide-in-left", "slide-in-right");
         });
 
-        if (direction === 1) {
-            newTestemonial.classList.add("slide-out-right");
+        // direction = 1 → moving forward
+        if (direction === 1){
             oldTestemonial.classList.add("slide-out-left");
-        } else {
-            newTestemonial.classList.add("slide-out-left");
-            oldTestemonial.classList.add("slide-out-right");          
+            newTestemonial.classList.add("slide-in-right");
+        } 
+        // direction = -1 → moving backward
+        else{
+            oldTestemonial.classList.add("slide-out-right");
+            newTestemonial.classList.add("slide-in-left");
         }
-
+        newTestemonial.offsetWidth;
+        
         newTestemonial.classList.add("active");
+        oldTestemonial.classList.remove("active");
 
-        // schedule next slide
         clearTimeout(slideTimeout);
         slideTimeout = setTimeout(() => show(index + 1, 1), 10000);
     }
@@ -65,5 +68,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Start
-    show(0);
+    show(0, 0);
 });
