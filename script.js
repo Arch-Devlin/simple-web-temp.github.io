@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let slideTimeout;
 
     function show(newIndex, direction) {
+        // ahghhhhhhh
+        // bug where when changing movment directions have to click twice 
+        // otherwise workes fine
         const oldIndex = index;
         index = (newIndex + testimonials.length) % testimonials.length;
 
