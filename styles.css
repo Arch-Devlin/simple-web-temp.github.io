@@ -345,6 +345,15 @@ main {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     width: 100%;
     max-width: 500px;
+    position: relative;
+    min-height: 140px;
+}
+
+/* Container inside card */
+.testimonial-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 140px;
 }
 
 /* Arrows */
@@ -355,7 +364,6 @@ main {
     cursor: pointer;
     color: var(--text-color);
     padding: 0 10px;
-    transition: 0.2s;
 }
 
 .arrow:hover {
@@ -366,6 +374,18 @@ main {
 .testimonial {
     display: none;
     text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;       /* make it fill the card */
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    /* vertical + horizontal centring */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .testimonial p {
@@ -380,14 +400,22 @@ main {
 
 /* Shown testimonial */
 .testimonial.active {
-    display: block;
+    display: flex;
     animation: fadeIn 0.4s ease-in-out;
+    transform: translateX(0);
+    opacity: 1;
 }
 
-/* Fade animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Slide-out left */
+.testimonial.slide-out-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* Slide-out right */
+.testimonial.slide-out-right {
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 /* Responsive tweaks */
