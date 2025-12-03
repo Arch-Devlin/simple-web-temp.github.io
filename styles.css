@@ -377,15 +377,19 @@ main {
   }
 }
 .columns-image {
-    width: 100%;
-    text-align: center; /* optional, if you want to center the image */
-    margin-top: 1rem; /* optional spacing */
+    flex: 1 1 100%;
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem auto;
 }
 
 .columns-image img {
     width: 100%;
-    height: auto; /* keep aspect ratio */
-    display: block; /* remove inline spacing issues */
+    height: auto;
+    display: block;
 }
 /* testimonials */
 /* Wrapper holding arrows + card */
