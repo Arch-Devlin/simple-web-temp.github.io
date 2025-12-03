@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function resetTimer() {
         clearTimeout(slideTimeout);
-        slideTimeout = setTimeout(() => show(index + 1, 1), 10000);
+        slideTimeout = setTimeout(() => show(index + 1, 1), 5000);
     }
 
     // Arrow buttons
