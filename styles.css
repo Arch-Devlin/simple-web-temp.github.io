@@ -325,6 +325,68 @@ main {
     display: block;
 }
 
+.columns-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.columns {
+    box-sizing: border-box;
+    flex: 1 1 300px;
+    max-width: 33.333%;
+    padding: 8px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+     box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .highlight {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 805px) {
+  .columns {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+.columns-image {
+    width: 100%;
+    text-align: center; /* optional, if you want to center the image */
+    margin-top: 1rem; /* optional spacing */
+}
+
+.columns-image img {
+    width: 100%;
+    height: auto; /* keep aspect ratio */
+    display: block; /* remove inline spacing issues */
+}
 /* testimonials */
 /* Wrapper holding arrows + card */
 .testimonial-wrapper {
