@@ -309,6 +309,7 @@ main {
         var(--outline-size)           var(--outline-size)          0 black;*/
 
     color: white;
+    font-size: 4rem;
     filter:
         drop-shadow(var(--outline-size) var(--outline-size) var(--outline-blur) black)
         drop-shadow(calc(var(--outline-size) * -1) var(--outline-size) var(--outline-blur) black)
