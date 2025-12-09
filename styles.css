@@ -48,13 +48,31 @@ body.dark-mode {
     background-color: var(--bg-color);
     flex-wrap: nowrap;       /* prevent wrapping until absolutely necessary */
     gap: 20px;               /* optional small spacing between items */
+    box-sizing: border-box;
 }
 
+.topbar-tiles {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.topbar-tiles .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    box-sizing: border-box;
+}
 /* Logo */
 .logo {
-    height: 150px;            /* max height */
+    height: auto;
+    max-height: 150px;            /* max height */
     width: auto;
     max-width: 100%; /* leave room for the button */
+    box-sizing: border-box;
 }
 
 /* Email button */
