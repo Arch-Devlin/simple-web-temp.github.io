@@ -25,10 +25,11 @@
     </header>
     
     <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="locations.html">Locations</a>
-        <a href="team.html">Team</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a href="locations.html">
+            <i class="fa fa-fw fa-map-marker"></i>Locations</a>
+        <a href="team.html"><i class="fa fa-fw fa-users"></i>Team</a>
+        <a href="contact.html"><i class="fa fa-fw fa-address-book-o"></i>Contact</a>
     </nav>
 
     <!--page body changes each page-->
